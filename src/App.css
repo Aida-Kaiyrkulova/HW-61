@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 200px;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+
+.country-item {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.country-item img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.details {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.borders-list li {
+  margin: 5px 0;
+}
