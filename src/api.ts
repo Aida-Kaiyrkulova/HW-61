@@ -7,7 +7,7 @@ export const makeRequest = async <T>(url: string): Promise<T> => {
 
   if (!response.ok) {
     const errorMessage = await response.text();
-    throw new Error(`Ошибка ${response.status}: ${errorMessage}`);
+    throw new Error(`Error ${response.status}: ${errorMessage}`);
   }
 
   return response.json();

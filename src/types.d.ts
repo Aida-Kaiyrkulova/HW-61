@@ -9,6 +9,6 @@ export interface CountryDetails {
   name: string;
   population: number;
   region: string;
-  borders: string[];
+  borders?: string[];
   flag: string;
 }

@@ -43,9 +43,8 @@ const App: React.FC = () => {
             <div
               key={country.alpha3Code}
               onClick={() => showCountryInfo(country.alpha3Code)}
-              className="country-item"
+              style={{ cursor: 'pointer', padding: '5px' }}
             >
-              <img src={country.flag} alt={`${country.name} flag`} />
               {country.name}
             </div>
           ))
@@ -56,12 +55,12 @@ const App: React.FC = () => {
           <>
             <h2>{selectedCountry.name}</h2>
             <img src={selectedCountry.flag} alt={`Flag of ${selectedCountry.name}`} style={{ width: '100px', marginBottom: '10px' }} />
-            <p><strong>Code:</strong>{selectedCountry.alpha3Code}</p>
+            <p><strong>Code:</strong> {selectedCountry.alpha3Code}</p>
             <p><strong>Population:</strong> {selectedCountry.population}</p>
-            <p><strong>Region:</strong>{selectedCountry.region}</p>
-            <h4><strong>Borders:</strong></h4>
+            <p><strong>Region:</strong> {selectedCountry.region}</p>
+            <h4>Borders:</h4>
             <ul className="borders-list">
-              {selectedCountry.borders.length > 0 ? (
+              {selectedCountry.borders && selectedCountry.borders.length > 0 ? (
                 selectedCountry.borders.map(border => {
                   const borderCountry = countries.find(c => c.alpha3Code === border);
                   return borderCountry ? (
